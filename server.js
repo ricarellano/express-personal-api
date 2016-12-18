@@ -65,7 +65,7 @@ app.get('/api', function api_index(req, res) {
 app.get('/api/profile', function (req, res) {
   // TODO: Document all your api endpoints below
   res.json({
-  name: "Ricado Arellano",
+  name: "Ricardo Arellano",
   githubUsername: "ricarellano",
   githubLink: "https://github.com/ricarellano",
   githubProfileImage: "https://avatars0.githubusercontent.com/u/20728970?v=3&s=460",

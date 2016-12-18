@@ -13,18 +13,37 @@
     <!-- VENDOR SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMWqgS-NCytGiWNM8iI7alneXXZsD55uc&callback=initMap"
+            async defer></script> -->
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1>Under Construction</h1>
-          <h4><a href="/api">Read My API Documentation</a></h4>
+      <div id="profile">
+        <script id="profile-template" type="text/x-handlebars-template">
+          <div class="row">
+            <div class="col-md-6">
+              <h1>{{name}}</h1>
+
+              <h4><a href="/api">Read My API Documentation</a></h4>
+            </div>
+            <div class="col-md-4 picture">
+             <img alt="profile" src = "{{githubProfileImage}}">
+           </div>
+          </div>
+          <div class="row">
+            <div  class="col-md-12">
+
+          </div>
+         </div>
+         <div class="row">
+           <div id ="map" class="col-md-12">
+
+         </div>
         </div>
-      </div>
+        </script>
+
     </div>
   </body>
 </html>
