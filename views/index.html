@@ -11,39 +11,50 @@
     <link rel="stylesheet" href="/styles/styles.css">
 
     <!-- VENDOR SCRIPTS -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMWqgS-NCytGiWNM8iI7alneXXZsD55uc&callback=initMap"
+    async defer></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMWqgS-NCytGiWNM8iI7alneXXZsD55uc&callback=initMap"
-            async defer></script> -->
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
   </head>
   <body>
+
     <div class="container">
-      <div id="profile">
+
+      <div class="row" id="profileInfo">
         <script id="profile-template" type="text/x-handlebars-template">
-          <div class="row">
-            <div class="col-md-6">
+          <div class="col-md-6">
               <h1>{{name}}</h1>
-
-              <h4><a href="/api">Read My API Documentation</a></h4>
-            </div>
-            <div class="col-md-4 picture">
+          </div>
+          <div class="col-md-4 picture">
              <img alt="profile" src = "{{githubProfileImage}}">
-           </div>
           </div>
-          <div class="row">
-            <div  class="col-md-12">
-
-          </div>
-         </div>
-         <div class="row">
-           <div id ="map" class="col-md-12">
-
-         </div>
-        </div>
         </script>
-
-    </div>
-  </body>
+      </div>
+      <div class="row">
+        <form class="form-inline" id="newProjectForm">
+          <div class="form-group">
+            <label for="title">Project</label>
+            <input type="text" class="form-control" name="title" placeholder="Project title">
+            <input type="text" class="form-control" name="gitLink" placeholder="GitHub Link">
+          </div>
+          <button type="submit" class="btn btn-default">Create Project</button>
+        </form>
+      </div>
+      <div class="row" id="newProject" >
+        <script id="projects-template" type="text/x-handlebars-template">
+          <div class="col-md-12">
+          <p>
+            <b>{{title}}</b> <a href={{gitLink}}>GitHub</a>
+            <button type="button" name="button" class="deleteBtn btn btn-danger pull-right" data-id="{{id}}">Delete</button>
+          </p>
+          </div>
+        </script>
+      </div>
+     <div class="row">
+       <div id ="map" class="col-md-12">
+     </div>
+  </div>
+</body>
 </html>
