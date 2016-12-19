@@ -22,3 +22,10 @@ img{
 #map{
   height: 500px;
 }
+
+.deleteBtn{
+  margin: 15px;
+}
+.link{
+  margin-left:40%;
+}
